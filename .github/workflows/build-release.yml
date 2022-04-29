@@ -19,13 +19,9 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - arch: mipsel_24kc
-            sdk_url_path: https://downloads.openwrt.org/snapshots/targets/ramips/mt7621/
-            sdk_name: -sdk-ramips-mt7621_
-          - arch: x86_64
-            sdk_url_path: https://downloads.openwrt.org/snapshots/targets/x86/64/
-            sdk_name: -sdk-x86-64_
-
+          - arch: mediatek
+            sdk_url_path: https://downloads.openwrt.org/snapshots/targets/ramips/mt7622/
+            sdk_name: -mediatek-mt7622_
     env:
       SDK_URL_PATH: ${{ matrix.sdk_url_path }}
       SDK_NAME: ${{ matrix.sdk_name }}
