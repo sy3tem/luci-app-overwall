@@ -22,9 +22,9 @@ jobs:
           - arch: mediatek
             sdk_url_path: https://downloads.openwrt.org/snapshots/targets/mediatek/mt7622/
             sdk_name: -sdk-mediatek-mt7622_
-          - arch: x86_64
-            sdk_url_path: https://downloads.openwrt.org/snapshots/targets/x86/64/
-            sdk_name: -sdk-x86-64_
+         # - arch: x86_64
+         #   sdk_url_path: https://downloads.openwrt.org/snapshots/targets/x86/64/
+         #   sdk_name: -sdk-x86-64_
     env:
       SDK_URL_PATH: ${{ matrix.sdk_url_path }}
       SDK_NAME: ${{ matrix.sdk_name }}
@@ -138,7 +138,7 @@ jobs:
         with:
           files: '*.ipk'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.Token }}
 
   notify:
     name: Notify Release Publish
