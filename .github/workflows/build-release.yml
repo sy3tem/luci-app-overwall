@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - '*'
+      - 'luci-app-overwall for ${{ matrix.arch }}'
   workflow_dispatch:
 
 env:
@@ -136,7 +136,7 @@ jobs:
       - name: Release and Upload Assets
         uses: softprops/action-gh-release@v1
         with:
-          files: '*.ipk'
+          files: 'luci-app-overwall.$(date +"%Y.%m.%d-%H%M").ipk'
         env:
           GITHUB_TOKEN: ${{ secrets.Token }}
 
