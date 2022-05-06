@@ -3,7 +3,7 @@ name: Build and Release
 on:
   push:
     tags:
-      - 'luci-app-overwall for ${{ matrix.arch }}'
+      - 'v0.0.2'
   workflow_dispatch:
 
 env:
