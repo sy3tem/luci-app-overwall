@@ -136,6 +136,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           files: 'luci-app-overwall.$(date +"%Y.%m.%d-%H%M").ipk'
+          tag_name: 'Build for ${{ matrix.arch }}'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
