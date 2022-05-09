@@ -138,7 +138,7 @@ jobs:
           files: 'luci-app-overwall.$(date +"%Y.%m.%d-%H%M").ipk'
           tag_name: 'Build for ${{ matrix.arch }}'
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.REPO_TOKEN }}
 
   notify:
     name: Notify Release Publish
